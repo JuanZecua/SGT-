@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
 <body class="bg-secondary">
-    
+
     <div class="container-fluid g-0 mb-3"> <!-- container-fluid sin gutters (g-0) -->
         <div class="row">
             <div class="col-12 p-0"> <!-- columna sin padding (p-0) -->
@@ -88,6 +88,7 @@
                                                 <option value="T">T</option>
                                                 <option value="V">V</option>
                                             </select>
+                                        <input type="text" class="form-control" placeholder="Cubículo" aria-label="Número de cubículo">
                                         <input type="text" class="form-control" id="cub2" name="cub2" placeholder="Cubículo" aria-label="Número de cubículo">
                                     </div>
                                     <div class="mb-3">
@@ -135,23 +136,22 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Validación de contraseña -->
     <script>
         document.querySelector('form').addEventListener('submit', function(e) {
-        
+
             const password = document.getElementById('pass').value;
             const confirmPassword = document.getElementById('confirm_pass').value;
-        
+
             if (password !== confirmPassword) {
                 document.getElementById('confirm_pass').classList.add('is-invalid');
             } else {
             // Simulación de registro exitoso hacer cambios si es necesario
                 const successModal = new bootstrap.Modal(document.getElementById('successModal'));
                 successModal.show();
-            
+
         }
     });
     </script>
 </body>
-</html>
